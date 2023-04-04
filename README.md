@@ -42,20 +42,24 @@ To combine the results obtained by the different base classifiers, we attempted 
 # Experimental Results
 The following table shows the public score obtained for each of the ensemble obtained through averaging across different validation sets and stacking to combine different feature concatenation methods.
 
+<div align="center">
+  
 | Model      | Feature Concatenation Method | Ensemble Method(s) | # of Base Classifiers |Public Score     |
 | :---        |    :----:   |   :---: | :----:  |:----: |
-| Facebook DeepFace      | $$Concat((X1-X2)^2,(X1*X2))$$        | 10-Fold C.V.  | 10|0.783|
-| ArcFace   | $$Concat((X1-X2)^2,(X1*X2))$$         | 10-Fold C.V.     | 10 |0.814|
-| FaceNet Pytorch (InceptionResNetV1)   | $$Concat((X1-X2)^2,(X1*X2))$$         | 10-Fold C.V.   | 10|0.812|
-| FaceNet (InceptionResNetV2)   | $$Concat((X1-X2)^2,(X1*X2))$$         | 10-Fold C.V.      |10|0.845|
-| FaceNet512 (InceptionResNetV2)   | $$Concat((X1-X2)^2,(X1*X2))$$         | 10-Fold C.V.      |10|0.784|
-| OpenFace  | $$Concat((X1-X2)^2,(X1*X2))$$         | 10-Fold C.V.     |10|0.757|
-| ResNet-50 (1)  | $$Concat((X1-X2)^2,(X1*X2))$$        |10-Fold C.V.      |10|0.862|
-| ResNet-50 (2)  | $$X1-X2$$ $$(X1-X2)^2\over(X1+X2)+1e^-7$$ $$X1^2-X^2$$ $$Concat(X1,X2)$$        | 9-Fold C.V. + Stacking    |36|0.862|
-| SENet-50   | $$X1-X2$$ $$(X1-X2)^2\over(X1+X2)+1e^-7$$ $$X1^2-X^2$$ $$Concat(X1,X2)$$          | 9-Fold C.V. + Stacking    |36|0.859|
-| Face Transformer | $$X1-X2$$ $$(X1-X2)^2$$ $$\exp(X1)-\exp(X2)$$ $$\frac{\exp(X1)}{\exp(X2)} - \frac{\exp(X2)}{\exp(X1)}$$ $$Concat(X1,X2)$$ | 9-Fold C.V. + Stacking |45|0.839|
+| [Facebook DeepFace](https://github.com/serengil/deepface)      | $$Concat((X1-X2)^2,(X1*X2))$$        | 10-Fold C.V.  | 10|0.783|
+| [ArcFace](https://github.com/serengil/deepface)   | $$Concat((X1-X2)^2,(X1*X2))$$         | 10-Fold C.V.     | 10 |0.814|
+| [FaceNet Pytorch </br>(InceptionResNetV1)](https://github.com/timesler/facenet-pytorch)    | $$Concat((X1-X2)^2,(X1*X2))$$         | 10-Fold C.V.   | 10|0.812|
+| [FaceNet </br>(InceptionResNetV2)](https://github.com/serengil/deepface)    | $$Concat((X1-X2)^2,(X1*X2))$$         | 10-Fold C.V.      |10|0.845|
+| [FaceNet512 </br>(InceptionResNetV2)](https://github.com/serengil/deepface)    | $$Concat((X1-X2)^2,(X1*X2))$$         | 10-Fold C.V.      |10|0.784|
+| [OpenFace](https://github.com/serengil/deepface)   | $$Concat((X1-X2)^2,(X1*X2))$$         | 10-Fold C.V.     |10|0.757|
+| [ResNet-50 (1)](https://github.com/rcmalli/keras-vggface)   | $$Concat((X1-X2)^2,(X1*X2))$$        |10-Fold C.V.      |10|0.862|
+| [ResNet-50 (2)](https://github.com/cydonia999/VGGFace2-pytorch)   | $$X1-X2$$ $$(X1-X2)^2\over(X1+X2)+1e^-7$$ $$X1^2-X^2$$ $$Concat(X1,X2)$$        | 9-Fold C.V. + Stacking    |36|0.862|
+| [SENet-50](https://github.com/cydonia999/VGGFace2-pytorch)    | $$X1-X2$$ $$(X1-X2)^2\over(X1+X2)+1e^-7$$ $$X1^2-X^2$$ $$Concat(X1,X2)$$          | 9-Fold C.V. + Stacking    |36|0.859|
+| [Face Transformer](https://github.com/zhongyy/Face-Transformer)  | $$X1-X2$$ $$(X1-X2)^2$$ $$\exp(X1)-\exp(X2)$$ $$\frac{\exp(X1)}{\exp(X2)} - \frac{\exp(X2)}{\exp(X1)}$$ $$Concat(X1,X2)$$ | 9-Fold C.V. + Stacking |45|0.839|
+
+</div>
 
 # Our Best Ensemble
 The following shows how we obtained our highesst public score of 91.5:
 
-<img src="https://github.com/W6WM9M/RFIW/blob/main/Images/best_ensemble.png" width="50%">
+<p align="center"><img src="https://github.com/W6WM9M/RFIW/blob/main/Images/best_ensemble.png" width="50%"></p>

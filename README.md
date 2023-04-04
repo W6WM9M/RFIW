@@ -7,7 +7,6 @@ This Github repository contains the work done for the CX4041 Machine Learning pr
 After extensive research on the performance of traditional machine learning techniques and deep learning techniques, we decided to concentrate our efforts on transfer learning, which is well-known to generate a good performance within a relatively short period of time. The use of transfer learning in our project revolves around utilizing models previously trained for facial recognition tasks to be customized to fit our FKV needs.
 </p>
 
-  
-
+<p align="justify"> 
 In our experiments, we attempted various pretrained state-of-the-art face models, which include [Facebook DeepFace](https://ieeexplore.ieee.org/document/6909616), [ArcFace]( https://ieeexplore.ieee.org/document/8953658), [FaceNet](https://ieeexplore.ieee.org/document/7298682), [OpenFace](https://ieeexplore.ieee.org/document/7477553), [ResNet](https://ieeexplore.ieee.org/document/7780459), [SENet](https://ieeexplore.ieee.org/document/8578843), and [Face Transformer](https://arxiv.org/abs/2103.14803). For each model, we tried one or more feature concatenation techniques and trained on different samples of the dataset to generate uncorrelated models to build our ensemble. Ultimately, throughout the duration of the project, we trained a total of 238 different base classifiers. Our best performing ensemble consists of a combination of classifiers trained on the outputs of ArcFace, FaceNet, ResNet-50, SENet-50, and Vision Transformer to produce a public score of 91.5%, placing us in the 6th place (out of 522 teams) in the public leaderboard. 
-
+</p>

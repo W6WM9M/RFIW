@@ -65,6 +65,15 @@ To combine the results obtained by the different base classifiers, we attempted 
 <p align="center"><img src="https://github.com/W6WM9M/RFIW/blob/main/Images/best_ensemble.png" width="60%"></p>
 
 # Jupyter Notebooks
-```Image Pair Generation.ipynb```: Generating the kinship and non-kinship pairs 
-```ResNet (2) and SENet.ipynb```: Training neural network classifier on features extracted by ResNet (2) and SENet
-```Face Transformer.ipynb```: Training neural network classifier on features encoded by Face Transformer
+
+<dl>
+  <dt><b><a href="https://github.com/W6WM9M/recognizing-faces-in-the-wild/blob/main/Jupyter%20Notebooks/Image%20Pair%20Generation.ipynb">Image Pair Generation.ipynb</a></b></dt>
+  <dd align="justify">For generating the kinship and non-kinship pairs </dd>
+
+  <dt><b><a href="https://github.com/W6WM9M/recognizing-faces-in-the-wild/blob/main/Jupyter%20Notebooks/ResNet%20(2)%20and%20SENet.ipynb">ResNet (2) and SENet.ipynb<a></b></dt>
+  <dd align="justify">For training neural network classifier on features extracted by ResNet (2) and SENet</dd>
+  
+  <dt><b><a href="https://github.com/W6WM9M/recognizing-faces-in-the-wild/blob/main/Jupyter%20Notebooks/Face%20Transformer.ipynb">Face Transformer.ipynb</a></b></dt>
+  <dd align="justify">For training neural network classifier on features encoded by Face Transformer</dd>
+
+</dl>

@@ -13,9 +13,11 @@ In our experiments, we attempted various pretrained state-of-the-art face models
 
 # Creating Uncorrelated Base Classifiers
 To create uncorrelated base classifiers, we employed the following methods:
-1. Using Different Pretrained Feature Extractors
+<ol>
+<li> Using Different Pretrained Feature Extractors
 Due to differences in training and architecture, different pretrained models extract different information about an image. As such, for each image pair, we can use different forms of feature vectors for classification.
-2. Using Multiple Feature Concatenation Methods
+<li> Using Multiple Feature Concatenation Methods
 We experimented with various methods of feature concatenations such as simple concatenation, absolute difference, squared absolute difference, exponential difference, and exponential ratio difference.  
-3. Using K-Fold Cross Validation
+<li> Using K-Fold Cross Validation
 The training dataset was divided into K segments, where (K-1) segments are used to train our classifier while the remaining one segment is used for validation. This allowed us to generate K uncorrelated classifiers per feature concatenation method and per feature extractor.  
+</ol>

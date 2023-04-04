@@ -4,7 +4,7 @@ This Github repository contains the work done for the CX4041 Machine Learning pr
 </p>
 
 <p align="justify"> 
-After extensive research on the performance of traditional machine learning techniques and deep learning techniques, we decided to concentrate our efforts on transfer learning, which is well-known to generate a good performance within a relatively short period of time. The use of transfer learning in our project revolves around utilizing models previously trained for facial recognition tasks to be customized to fit our FKV needs.
+After extensive research on the performance of traditional machine learning techniques and deep learning techniques, we decided to concentrate our efforts on transfer learning, which is well-known to generate a good performance within a relatively short period of time. The use of transfer learning in our project revolves around utilizing models previously trained for facial recognition tasks to be customized to fit our FKV needs. Moreover, we also used count on ensemble learning to boost our test results. 
 </p>
 
 <p align="justify"> 
@@ -14,21 +14,27 @@ In our experiments, we attempted various pretrained state-of-the-art face models
 # Creating Uncorrelated Base Classifiers
 To create uncorrelated base classifiers, we attempted the following methods:
 <dl>
-<dt><b>1. Using Different Pretrained Feature Extractors</b></dt>
-<dd>Due to differences in training and architecture, different pretrained models extract different information about an image. As such, for each image pair, we can use different forms of feature vectors for classification.</dd>
+  <dt><b>1. Using Different Pretrained Feature Extractors</b></dt>
+  <dd>Due to differences in training and architecture, different pretrained models extract different information about an image. As such, for each image pair, we can use different forms of feature vectors for classification.</dd>
 
-<dt><b>2. Using Multiple Feature Concatenation Methods</b></dt>
-<dd>We experimented with various methods of feature concatenations such as simple concatenation, absolute difference, squared absolute difference, exponential difference, and exponential ratio difference.</dd>
+  <dt><b>2. Using Multiple Feature Concatenation Methods</b></dt>
+  <dd>We experimented with various methods of feature concatenations such as simple concatenation, absolute difference, squared absolute difference, exponential difference, and exponential ratio difference.</dd>
   
-<dt><b>3. Using K-Fold Cross Validation</b></dt>
-<dd>The training dataset was divided into K segments, where (K-1) segments are used to train our classifier while the remaining one segment is used for validation. This allowed us to generate K uncorrelated classifiers per feature concatenation method and per feature extractor.</dd>
+  <dt><b>3. Using K-Fold Cross Validation</b></dt>
+  <dd>The training dataset was divided into K segments, where (K-1) segments are used to train our classifier while the remaining one segment is used for validation. This allowed us to generate K uncorrelated classifiers per feature concatenation method and per feature extractor.</dd>
 </dl>
 
 # Ensemble Methods
+To combine the results obtained by the different base classifiers, we attempted the following ensemble methods: 
 <dl>
-  <dt><b>1.</b></dt> 
-  To combine the K classifiers genereated by K-fold cross validation, we simply average the classifiers' output probabilities on the test dataset.  
-
-To combine multiple feature concatenation methods, we attempted stacking, where a combiner is trained to combine the different classifiers' outputs. In particular, we trained three different combiners including Sklearn Gradient Boosting, LightGBM, and a simple Neural Network. 
-
-To combine the ensembled result of each pretrained model, we attempted various combinations of averaging the ensemble results of the different models.
+  <dt><b>1. Averaging across Different Validation Sets</b></dt> 
+  <dd>To combine the K classifiers genereated by K-fold cross validation, we simply average the classifiers' output probabilities on the test dataset.</dd> 
+  
+  <dt><b>2. Stacking to Combine Different Feature Concatenation Methods</b></dt>
+  <dd>To combine multiple feature concatenation methods, we attempted stacking, where a combiner is trained to combine the different classifiers' outputs. In particular, we trained three different combiners including Sklearn Gradient Boosting, LightGBM, and a simple Neural Network.</dd> 
+  
+  <dt><b>3. Averaging across Different Feature Extractors</b></dt>
+  <dd>To combine the ensembled result of each pretrained model, we attempted various combinations of averaging the ensemble results of the different models.</dd>
+</dl> 
+# Our Best Ensemble
+  

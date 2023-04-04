@@ -36,5 +36,7 @@ To combine the results obtained by the different base classifiers, we attempted 
   <dt><b>3. Averaging across Different Feature Extractors</b></dt>
   <dd>To combine the ensembled result of each pretrained model, we attempted various combinations of averaging the ensemble results of the different models.</dd>
 </dl> 
+
 # Our Best Ensemble
-  
+The following shows how we obtained our highesst public score of 91.5:
+

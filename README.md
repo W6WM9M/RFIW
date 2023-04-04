@@ -8,8 +8,10 @@ After extensive research on the performance of traditional machine learning tech
 </p>
 
 <p align="justify"> 
-In our experiments, we attempted various pretrained state-of-the-art face models, which include <a href="https://ieeexplore.ieee.org/document/6909616">Facebook DeepFace</a>, <a href="https://ieeexplore.ieee.org/document/8953658">ArcFace</a>, <a href="https://ieeexplore.ieee.org/document/7298682">FaceNet</a>, <a href="https://ieeexplore.ieee.org/document/7477553">OpenFace</a>, <a href="https://ieeexplore.ieee.org/document/7780459">ResNet</a>, <a href="https://ieeexplore.ieee.org/document/8578843">SENet</a>, and <a href="https://arxiv.org/abs/2103.14803">Face Transformer</a>. For each model, we tried one or more feature concatenation techniques and trained on different samples of the dataset to generate uncorrelated models to build our ensemble. Ultimately, throughout the duration of the project, we trained a total of 238 different base classifiers. Our best performing ensemble consists of a combination of classifiers trained on the outputs of ArcFace, FaceNet, ResNet-50, SENet-50, and Vision Transformer to produce a public score of 91.5%, placing us in the 6th place (out of 522 teams) in the public leaderboard. 
-</p>
+In our experiments, we attempted various pretrained state-of-the-art face models, which include <a href="https://ieeexplore.ieee.org/document/6909616">Facebook DeepFace</a>, <a href="https://ieeexplore.ieee.org/document/8953658">ArcFace</a>, <a href="https://ieeexplore.ieee.org/document/7298682">FaceNet</a>, <a href="https://ieeexplore.ieee.org/document/7477553">OpenFace</a>, <a href="https://ieeexplore.ieee.org/document/7780459">ResNet</a>, <a href="https://ieeexplore.ieee.org/document/8578843">SENet</a>, and <a href="https://arxiv.org/abs/2103.14803">Face Transformer</a>. For each model, we tried one or more feature concatenation techniques and trained on different samples of the dataset to generate uncorrelated models to build our ensemble. Ultimately, throughout the duration of the project, we trained a total of 238 different base classifiers. Our best performing ensemble consists of a combination of classifiers trained on the outputs of ArcFace, FaceNet, ResNet-50, SENet-50, and Vision Transformer to produce a public score of 91.5%, placing us in the 6th place (out of 522 teams) in the public leaderboard.</p>
+
+<p align="center"><img src="https://github.com/W6WM9M/RFIW/blob/main/Images/kaggle_score.png" width="50%"></p>
+
 
 # Creating Uncorrelated Base Classifiers
 To create uncorrelated base classifiers, we attempted the following methods:
@@ -40,3 +42,4 @@ To combine the results obtained by the different base classifiers, we attempted 
 # Our Best Ensemble
 The following shows how we obtained our highesst public score of 91.5:
 
+<img src="https://github.com/W6WM9M/RFIW/blob/main/Images/best_ensemble.png" width="50%">

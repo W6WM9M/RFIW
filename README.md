@@ -22,15 +22,15 @@ To create uncorrelated base classifiers, we attempted the following methods:
   <dt><b>2. Using Multiple Feature Concatenation Methods</b></dt>
   <dd>We experimented with various methods of feature concatenations such as simple concatenation, absolute difference, squared absolute difference, exponential difference, and exponential ratio difference.</dd>
   
-  <dt><b>3. Using K-Fold Cross Validation</b></dt>
-  <dd>The training dataset was divided into K segments, where (K-1) segments are used to train our classifier while the remaining one segment is used for validation. This allowed us to generate K uncorrelated classifiers per feature concatenation method and per feature extractor.</dd>
+  <dt><b>3. Using <i>K</i>-Fold Cross Validation</b></dt>
+  <dd>The training dataset was divided into <i>K</i> segments, where <i>K</i> segments are used to train our classifier while the remaining one segment is used for validation. This allowed us to generate <i>K</i> uncorrelated classifiers per feature concatenation method and per feature extractor.</dd>
 </dl>
 
 # Ensemble Methods
 To combine the results obtained by the different base classifiers, we attempted the following ensemble methods: 
 <dl>
   <dt><b>1. Averaging across Different Validation Sets</b></dt> 
-  <dd>To combine the K classifiers genereated by K-fold cross validation, we simply average the classifiers' output probabilities on the test dataset.</dd> 
+  <dd>To combine the <i>K</i> classifiers genereated by <i>K</i>-fold cross validation, we simply average the classifiers' output probabilities on the test dataset.</dd> 
   
   <dt><b>2. Stacking to Combine Different Feature Concatenation Methods</b></dt>
   <dd>To combine multiple feature concatenation methods, we attempted stacking, where a combiner is trained to combine the different classifiers' outputs. In particular, we trained three different combiners including Sklearn Gradient Boosting, LightGBM, and a simple Neural Network.</dd> 

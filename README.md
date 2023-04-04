@@ -12,12 +12,23 @@ In our experiments, we attempted various pretrained state-of-the-art face models
 </p>
 
 # Creating Uncorrelated Base Classifiers
-To create uncorrelated base classifiers, we employed the following methods:
-<ol>
-<li> **Using Different Pretrained Feature Extractors**
-Due to differences in training and architecture, different pretrained models extract different information about an image. As such, for each image pair, we can use different forms of feature vectors for classification.
-<li> **Using Multiple Feature Concatenation Methods**
-We experimented with various methods of feature concatenations such as simple concatenation, absolute difference, squared absolute difference, exponential difference, and exponential ratio difference.  
-<li>** Using K-Fold Cross Validation**
-The training dataset was divided into K segments, where (K-1) segments are used to train our classifier while the remaining one segment is used for validation. This allowed us to generate K uncorrelated classifiers per feature concatenation method and per feature extractor.  
-</ol>
+To create uncorrelated base classifiers, we attempted the following methods:
+<dl>
+<dt><b>1. Using Different Pretrained Feature Extractors</b></dt>
+<dd>Due to differences in training and architecture, different pretrained models extract different information about an image. As such, for each image pair, we can use different forms of feature vectors for classification.</dd>
+
+<dt><b>2. Using Multiple Feature Concatenation Methods</b></dt>
+<dd>We experimented with various methods of feature concatenations such as simple concatenation, absolute difference, squared absolute difference, exponential difference, and exponential ratio difference.</dd>
+  
+<dt><b>3. Using K-Fold Cross Validation</b></dt>
+<dd>The training dataset was divided into K segments, where (K-1) segments are used to train our classifier while the remaining one segment is used for validation. This allowed us to generate K uncorrelated classifiers per feature concatenation method and per feature extractor.</dd>
+</dl>
+
+# Ensemble Methods
+<dl>
+  <dt><b>1.</b></dt> 
+  To combine the K classifiers genereated by K-fold cross validation, we simply average the classifiers' output probabilities on the test dataset.  
+
+To combine multiple feature concatenation methods, we attempted stacking, where a combiner is trained to combine the different classifiers' outputs. In particular, we trained three different combiners including Sklearn Gradient Boosting, LightGBM, and a simple Neural Network. 
+
+To combine the ensembled result of each pretrained model, we attempted various combinations of averaging the ensemble results of the different models.

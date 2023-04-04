@@ -1,4 +1,4 @@
-# CX4041 Machine Learning Project: Recognizing Families In the Wild
+# CX4041 Machine Learning Project: Recognizing Faces In the Wild
 <p align="justify"> 
 This Github repository contains the work done for the CX4041 Machine Learning project in Nanyang Technological University, Singapore. In this project, we are required to work on one of the past Kaggle competitions by applying what we have learnt during the course of the semester. We decided to work on the 2019 Kaggle Competition: <a href="https://www.kaggle.com/competitions/recognizing-faces-in-the-wild/overview">Northeastern SMILE Lab - Recognising Faces in the Wild</a>, where we are provided with the <a href="https://web.northeastern.edu/smilelab/fiw/">Families In the Wild</a> dataset and tasked to tackle the problem of Facial Kinship Verification (FKV). The goal of FKV is to create an automatic kinship classifier to determine if two individuals are biologically related based on just their facial images. Submissions to Kaggle were evaluated on the area under the ROC curve between the predicted probability and the observed target.
 </p>

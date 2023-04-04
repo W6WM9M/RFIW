@@ -63,3 +63,8 @@ To combine the results obtained by the different base classifiers, we attempted 
 <p align="justify">The following shows how we obtained our highesst public score of 91.5:</p>
 
 <p align="center"><img src="https://github.com/W6WM9M/RFIW/blob/main/Images/best_ensemble.png" width="60%"></p>
+
+# Jupyter Notebooks
+```Image Pair Generation.ipynb```: Generating the kinship and non-kinship pairs 
+```ResNet (2) and SENet.ipynb```: Training neural network classifier on features extracted by ResNet (2) and SENet
+```Face Transformer.ipynb```: Training neural network classifier on features encoded by Face Transformer

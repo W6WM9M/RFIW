@@ -39,6 +39,22 @@ To combine the results obtained by the different base classifiers, we attempted 
   <dd>To combine the ensembled result of each pretrained model, we attempted various combinations of averaging the ensemble results of the different models.</dd>
 </dl> 
 
+# Experimental Results
+The following table shows the public score obtained for each of the ensemble obtained through averaging across different validation sets and stacking to combine different feature concatenation methods.
+
+| Model      | Feature Concatenation Method | Ensemble Method(s) | # of Base Classifiers |Public Score     |
+| :---        |    :----:   |   :---: | :----:  |:----: |
+| Facebook DeepFace      | $$Concat((X1-X2)^2,(X1*X2))$$        | 10-Fold C.V.  | 10|0.783|
+| ArcFace   | $$Concat((X1-X2)^2,(X1*X2))$$         | 10-Fold C.V.     | 10 |0.814|
+| FaceNet Pytorch (InceptionResNetV1)   | $$Concat((X1-X2)^2,(X1*X2))$$         | 10-Fold C.V.   | 10|0.812|
+| FaceNet (InceptionResNetV2)   | $$Concat((X1-X2)^2,(X1*X2))$$         | 10-Fold C.V.      |10|0.845|
+| FaceNet512 (InceptionResNetV2)   | $$Concat((X1-X2)^2,(X1*X2))$$         | 10-Fold C.V.      |10|0.784|
+| OpenFace  | $$Concat((X1-X2)^2,(X1*X2))$$         | 10-Fold C.V.     |10|0.757|
+| ResNet-50 (1)  | $$Concat((X1-X2)^2,(X1*X2))$$        |10-Fold C.V.      |10|0.862|
+| ResNet-50 (2)  | $$X1-X2$$ $$(X1-X2)^2\over(X1+X2)+1e^-7$$ $$X1^2-X^2$$ $$Concat(X1,X2)$$        | 9-Fold C.V. + Stacking    |36|0.862|
+| SENet-50   | $$X1-X2$$ $$(X1-X2)^2\over(X1+X2)+1e^-7$$ $$X1^2-X^2$$ $$Concat(X1,X2)$$          | 9-Fold C.V. + Stacking    |36|0.859|
+| Face Transformer | $$X1-X2$$ $$(X1-X2)^2$$ $$\exp(X1)-\exp(X2)$$ $$\frac{\exp(X1)}{\exp(X2)} - \frac{\exp(X2)}{\exp(X1)}$$ $$Concat(X1,X2)$$ | 9-Fold C.V. + Stacking |45|0.839|
+
 # Our Best Ensemble
 The following shows how we obtained our highesst public score of 91.5:
 

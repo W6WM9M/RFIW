@@ -4,7 +4,7 @@ This Github repository contains the work done for the CX4041 Machine Learning pr
 </p>
 
 <p align="justify"> 
-After extensive research on the performance of traditional machine learning techniques and deep learning techniques, we decided to concentrate our efforts on transfer learning, which is well-known to generate a good performance within a relatively short period of time. The use of transfer learning in our project revolves around utilizing models previously trained for facial recognition tasks to be customized to fit our FKV needs. Moreover, we also used count on ensemble learning to boost our test results. 
+After extensive research on the performance of traditional machine learning techniques and deep learning techniques, we decided to concentrate our efforts on transfer learning, which is well-known to generate a good performance within a relatively short period of time. The use of transfer learning in our project revolves around utilizing models previously trained for facial recognition tasks to be customized to fit our FKV needs. Moreover, we also counted on ensemble learning to boost our test results. 
 </p>
 
 <p align="justify"> 

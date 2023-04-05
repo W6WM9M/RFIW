@@ -48,7 +48,7 @@ To combine the results obtained by the different base classifiers, we attempted 
 | :---:        |    :----:   |   :---: | :----:  |:----: |
 | [Facebook DeepFace](https://github.com/serengil/deepface)      | $$Concat((X1-X2)^2,(X1*X2))$$        | 10-Fold Cross Validation  | 10|0.783|
 | [ArcFace](https://github.com/serengil/deepface)   | $$Concat((X1-X2)^2,(X1*X2))$$         | 10-Fold Cross Validation     | 10 |0.814|
-| [FaceNet Pytorch </br>(InceptionResNetV1)](https://github.com/timesler/facenet-pytorch)    | $$Concat((X1-X2)^2,(X1*X2))$$         | 10-Fold Cross Validation   | 10|0.812|
+| [FaceNet Pytorch </br>(InceptionResNetV1)](https://github.com/timesler/facenet-pytorch)    | $$\lvert X1-X2 \rvert$$ $$Concat(X1, X2)$$         | 10-Fold Cross Validation   | 20|0.812|
 | [FaceNet </br>(InceptionResNetV2)](https://github.com/serengil/deepface)    | $$Concat((X1-X2)^2,(X1*X2))$$         | 10-Fold Cross Validation     |10|0.845|
 | [FaceNet512 </br>(InceptionResNetV2)](https://github.com/serengil/deepface)    | $$Concat((X1-X2)^2,(X1*X2))$$         | 10-Fold Cross Validation      |10|0.784|
 | [OpenFace](https://github.com/serengil/deepface)   | $$Concat((X1-X2)^2,(X1*X2))$$         | 10-Fold Cross Validation     |10|0.757|
